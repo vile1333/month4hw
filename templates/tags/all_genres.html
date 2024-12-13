@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="{% url 'baby_genres' %}">Книги для детей</a>
+<a href="{% url 'teenager_genres' %}">Книги для подростков</a>
+<a href="{% url 'youth_genres' %}">Книги для молодежи</a>
+<a href="{% url 'pensioner_genres' %}">Книги для пенсионеров</a>
+
+{% for i in genres %}
+
+<p>{{ i.name }}</p>
+<p>{{ i.price }}</p>
+
+
+{% endfor %}
+</body>
+</html>

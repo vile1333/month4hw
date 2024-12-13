@@ -15,7 +15,7 @@ class BookModel(models.Model):
     price = models.FloatField(verbose_name='Укажите цену', default= 10)
     created_at = models.DateField(auto_now_add=True)
     genre = models.CharField(max_length=100,choices=GENRE,default='Роман')
-    mail = models.CharField(max_length=100,verbose_name='Укажите почту')
+    mail = models.EmailField(max_length=100,verbose_name='Укажите почту')
     author = models.CharField(max_length=100,verbose_name='Укажите автора')
     trailer = models.URLField(verbose_name='Укажите ссылку на книгу')
 
@@ -26,5 +26,26 @@ class BookModel(models.Model):
     def __str__(self):
         return self.title
 
+class Review(models.Model):
+    STARS = (
+        ('⭐','⭐'),
+        ('⭐⭐', '⭐⭐'),
+        ('⭐⭐⭐', '⭐⭐⭐'),
+        ('⭐⭐⭐⭐', '⭐⭐⭐⭐'),
+        ('⭐⭐⭐⭐⭐', '⭐⭐⭐⭐⭐')
+    )
 
+
+    book = models.ForeignKey(BookModel,on_delete=models.CASCADE,related_name='reviews')
+    created_at = models.DateField(auto_now_add=True)
+    text_review = models.TextField(verbose_name='Отзыв о книге')
+    stars = models.CharField(max_length=100,verbose_name='Поставьте оценку',choices=STARS,default='⭐')
+
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+
+
+    def __str__(self):
+        return f'{self.book} : {self.stars}'
 # Create your models here.
