@@ -1,7 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 import datetime
-from . import models
+from . import models,forms
+from .forms import ReviewForm
+from .models import Review, BookModel
+
 
 def book_detail(request, id):
     if request.method == 'GET':
@@ -20,6 +23,35 @@ def book_list(request):
         }
         return render(request, 'book.html', context)
 
+# def create_comment_view(request):
+#     if request.method == 'POST':
+#         form = ReviewForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('book_detail', id=form.instance.id)
+#     else:
+#         form = ReviewForm()
+#     return render(request, 'comment/create_comment.html', {'form': form})
+
+def create_comment_view(request, id):
+    book = get_object_or_404(BookModel, id=id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.book = book
+            review.save()
+            return redirect('book_detail', id=book.id)
+    else:
+        form = ReviewForm()
+    return render(request, 'comment/create_comment.html', {'form': form, 'book': book})
+
+
+def comment_list_view(request):
+    if request.method == 'GET':
+        comment_list = Review.objects.all().order_by('-id')
+        context = {'comment_list': comment_list}
+        return render(request, 'book_detail.html', context)
 
 
 def about_me(request):

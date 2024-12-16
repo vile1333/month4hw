@@ -22,6 +22,9 @@
     <!-- Блок для комментариев -->
     <div class="comment-section">
         <h5>Комментарии</h5>
+        <li class="nav-item">
+                    <a class="nav-link enable" href="{% url 'create_comment' id=book_id.id %}" style="color: black;">Оставить коммент</a>
+                </li>
         {% for i in book_id.reviews.all %}
         <div class="comment">
             <p> {{ i.created_at }}: {{ i.text_review }} <strong>Оценка:</strong>{{ i.stars }}</p>
