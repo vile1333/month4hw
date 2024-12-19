@@ -3,9 +3,9 @@ from . import views
 
 
 urlpatterns = [
-    path('all_genres/', views.all_genre, name='all_genres'),
-    path('baby_genres/', views.baby_genre, name='baby_genres'),
-    path('youth_genres/', views.youth_genre, name='youth_genres'),
-    path('teenager_genres/', views.teenager_genre, name='teenager_genres'),
-    path('pensioner_genres/', views.pensioner_genre, name='pensioner_genres'),
+    path('all_genres/', views.AllGenreView.as_view(), name='all_genres'),
+    path('baby_genres/', views.BabyGenreView.as_view(), name='baby_genres'),
+    path('youth_genres/', views.YouthGenreView.as_view(), name='youth_genres'),
+    path('teenager_genres/', views.TeenagerGenreView.as_view(), name='teenager_genres'),
+    path('pensioner_genres/', views.PensionerGenreView.as_view(), name='pensioner_genres'),
 ]
