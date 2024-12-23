@@ -1,0 +1,11 @@
+<ol>
+    {% for i in litres %}
+    <li>
+        <h1>{{i.title}}</h1>
+        <img src = '{{ i.image }}' alt="" width="400" height="300">
+        <h2>{{i.formats}}</h2>
+        <h3>{{i.price}}</h3>
+        <hr><hr><hr>
+    {% endfor %}
+    </li>
+</ol>
