@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'genre_books',
     'basket',
     'parser_app',
+    'receipts',
 ]
 
 MIDDLEWARE = [

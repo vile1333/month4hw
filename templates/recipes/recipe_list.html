@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепты</title>
+</head>
+<body>
+    <h1>Рецепты</h1>
+    <form method="get" action="">
+        <input type="text" name="q" placeholder="Поиск рецептов" value="{{ query }}">
+        <button type="submit">Искать</button>
+    </form>
+    <a href="{% url 'recipe_create' %}">Добавить новый рецепт</a>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.title }}</a>
+                <a href="{% url 'recipe_delete' recipe.id %}" style="color: red;">Удалить</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

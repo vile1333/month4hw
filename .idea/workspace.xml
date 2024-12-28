@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8451b24-6a17-4fde-93ea-627fd4236f73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/parser_app/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_app/parser_litres.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/litres/litres.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/litres/litres_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receipts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receipts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/collection_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/collection_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/collection_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/ingredient_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/recipe_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/recipe_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/recipe_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipes/recipe_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
@@ -40,21 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.parser_litres.executor": "Run",
-    "Python.parser_rezka.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.parser_litres.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parser_rezka.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/PycharmProjects/geeks_47_1class_work-master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\month4hw\templates" />
@@ -87,7 +93,10 @@
       <workItem from="1733681464967" duration="612000" />
       <workItem from="1734013607168" duration="2764000" />
       <workItem from="1734051346844" duration="4496000" />
-      <workItem from="1734356921759" duration="28752000" />
+      <workItem from="1734356921759" duration="29191000" />
+      <workItem from="1735383988811" duration="17000" />
+      <workItem from="1735384418208" duration="4214000" />
+      <workItem from="1735388953433" duration="1081000" />
     </task>
     <servers />
   </component>

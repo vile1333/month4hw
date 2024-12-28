@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ recipe.title }}</title>
+</head>
+<body>
+    <h1>{{ recipe.title }}</h1>
+    <p>{{ recipe.description }}</p>
+    <h2>Ингредиенты</h2>
+    <ul>
+        {% for ingredient in recipe.ingredients.all %}
+            <li>
+                {{ ingredient.name }}: {{ ingredient.quantity }} {{ ingredient.get_unit_display }}
+                {% if ingredient.is_optional %}(по желанию){% endif %}
+                {% if ingredient.calories %} - {{ ingredient.calories }} ккал{% endif %}
+                {% if ingredient.notes %} ({{ ingredient.notes }}){% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Общее количество калорий: {{ total_calories }}</h3>
+    <a href="{% url 'ingredient_create' recipe.id %}">Добавить ингредиент</a>
+    <br>
+    <a href="{% url 'recipe_list' %}">Вернуться к списку рецептов</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Коллекции</title>
+</head>
+<body>
+    <h1>Коллекции рецептов</h1>
+    <a href="{% url 'collection_create' %}">Добавить новую коллекцию</a>
+    <ul>
+        {% for collection in collections %}
+            <li>
+                <a href="{% url 'collection_detail' collection.pk %}">{{ collection.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'recipe_list' %}">Назад к рецептам</a>
+</body>
+</html>

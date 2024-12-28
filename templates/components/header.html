@@ -53,7 +53,22 @@
                 <li class="nav-item">
                     <a class="nav-link enable" href="{% url 'litres_list' %}" style="color: yellow;">Другие книги</a>
                 </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="{% url 'recipe_list' %}" style="color: yellow;">Рецепты</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="{% url 'collection_list' %}" style="color: yellow;">Коллекции</a>
+                </li>
+                <form action="{% url 'recipe_list' %}" method="GET"  class="d-flex" role="search">
+                <input class="form-control me-2"type = "text" name="q"   type="search" placeholder="Поиск рецепта" aria-label="Поиск">
+                <button class="btn btn-outline-success" type="submit" style="color: yellow; border-color: yellow;">
+                    Поиск
+                </button>
+            </form>
             </ul>
+
             <form action="{% url 'search' %}" method="GET"  class="d-flex" role="search">
                 <input class="form-control me-2"type = "text" name="q"   type="search" placeholder="Поиск" aria-label="Поиск">
                 <button class="btn btn-outline-success" type="submit" style="color: yellow; border-color: yellow;">
